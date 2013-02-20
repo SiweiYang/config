@@ -2,7 +2,8 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
-(package-refresh-contents)
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 (unless (package-installed-p 'haskell-mode)
   (package-install 'haskell-mode))
@@ -16,5 +17,6 @@
 ;; (require 'paredit) if you didn't install it via package.el
 (add-hook 'clojure-mode-hook 'paredit-mode)
 
+;; complete haskell-mode hooks
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation-mode)
