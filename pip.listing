@@ -1,0 +1,1 @@
+distribute virtualenv boto lxml requests envoy dulwich fabric cement bottle ply
