@@ -61,8 +61,6 @@
 
 (add-hook 'haskell-mode-hook #'rainbow-delimiters-mode)
 
-(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
-
 (add-hook 'haskell-mode-hook 'company-mode)
 (add-to-list 'company-backends 'company-ghc)
 (custom-set-variables '(company-ghc-show-info t))
