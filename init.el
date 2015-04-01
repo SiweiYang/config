@@ -48,9 +48,14 @@
   (define-key haskell-mode-map (kbd "C-c C-n C-t") 'haskell-process-do-type)
   (define-key haskell-mode-map (kbd "C-c C-n C-i") 'haskell-process-do-info)))
 
+;; for ghc-mod
+(autoload 'ghc-init "ghc" nil t)
+(autoload 'ghc-debug "ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+
 ;; complete haskell-mode hooks
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-decl-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-decl-scan)
 ;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation-mode)
 (add-hook 'haskell-mode-hook 'structured-haskell-mode)
 
