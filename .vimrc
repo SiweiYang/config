@@ -17,6 +17,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
