@@ -4,11 +4,15 @@ alias get="sudo apt-get install -y"
 
 #Git customization
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+git config --global alias.cl clone
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.unstage 'reset HEAD --'
+
+git config --global user.email "yangsiwei880813@gmail.com"
+git config --global user.name "Siwei Yang"
 
 export PATH=$PATH:~/opt/bin
 
